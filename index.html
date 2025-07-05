@@ -92,7 +92,20 @@
 </head>
 <body>
 <div id="map"></div>
-<div id="map1"></div>
+<div id="map1">
+
+	<script>
+    function newMap() {
+        map = new google.maps.Map(document.getElementById("map"), {
+		zoom: 5,
+          center: {lat: 22.2343358, lng: 91.8236618},
+          mapTypeId: 'satellite',
+          labels:true
+        });
+    }
+</script>
+<script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGXaF9n_XgHUHMaTn0wiP9yDqVB5S0SrA&amp;callback=newMap"></script>
+</div>
 <!-- Floating Form on Map -->
 <div id="input-overlay" style="
   position: absolute;
@@ -134,17 +147,7 @@
 <button type="submit">Run Simulation</button>
 </form>
 </div>
-<script>
-    function newMap() {
-        map = new google.maps.Map(document.getElementById("map"), {
-		zoom: 5,
-          center: {lat: 22.2343358, lng: 91.8236618},
-          mapTypeId: 'satellite',
-          labels:true
-        });
-    }
-</script>
-<script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGXaF9n_XgHUHMaTn0wiP9yDqVB5S0SrA&amp;callback=newMap"></script>	
+	
 
 
 
