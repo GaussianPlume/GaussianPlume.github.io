@@ -31,6 +31,7 @@
         height: 100%;
         margin: 0;
         padding: 0;
+	z-index: 1000
       }
 
 
@@ -245,7 +246,7 @@ var config = {
 	  
 	  
       function initMap() {    
-        //setTimeout(initMap,10000)
+        setTimeout(initMap,10000)
         var a = Math.floor(Math.random() * 180);
        // var max;
         map = new google.maps.Map(document.getElementById('map'), {
