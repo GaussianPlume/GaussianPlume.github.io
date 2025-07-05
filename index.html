@@ -92,6 +92,7 @@
 </head>
 <body>
 <div id="map"></div>
+<div id="map1"></div>
 <!-- Floating Form on Map -->
 <div id="input-overlay" style="
   position: absolute;
@@ -228,7 +229,7 @@ var config = {
 //       Lon: longitude,
 //       Wind_Speed : ws,
 //       Wind_direction : wd,
-//       Quantity :Q,
+//       Quantity: Q,
 //       //Max_Distance : Math.max(r[i])
 //       latLng : latLng
 //   };
@@ -246,7 +247,7 @@ var config = {
 	  
 	  
       function initMap() {    
-        setTimeout(initMap,10000)
+       //setTimeout(initMap,10000)
         var a = Math.floor(Math.random() * 180);
        // var max;
         map = new google.maps.Map(document.getElementById('map'), {
