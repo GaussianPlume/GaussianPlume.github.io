@@ -24,13 +24,14 @@
       /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
 #map {
-    position: relative;
-    top: 10;
-    left: 100;
-    width: 100vw;
-    height: 100vh;
-    z-index: 1000;
-}
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
 
 
 
