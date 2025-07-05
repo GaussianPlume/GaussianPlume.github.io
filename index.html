@@ -17,34 +17,49 @@
 <head>
 <script src="https://www.gstatic.com/firebasejs/4.10.0/firebase.js"></script>
 <script src="https://d3js.org/d3.v4.min.js"></script>
+<script>
+    function newMap() {
+        map = new google.maps.Map(document.getElementById("map"), {
+		zoom: 15,
+          center: {lat: 22.2343358, lng: 91.8236618},
+          mapTypeId: 'satellite',
+          labels:false
+        });
+    }
+</script>
+<script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGXaF9n_XgHUHMaTn0wiP9yDqVB5S0SrA&amp;callback=newMap"></script>	
 <meta content="initial-scale=1.0, user-scalable=no" name="viewport"/>
 <meta charset="utf-8"/>
-<title>Polygon Arrays</title>
+<title>Gaussian Plume</title>
+<style>
+
+
+
+
+	  
+    </style>
 <style>
       /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
-
-</style>
-<style>
 #map {
         height: 100%;
       }
       /* Optional: Makes the sample page fill the window. */
       html, body {
-	position: relative;
         height: 100%;
         margin: 0;
-        padding: 0;
-	z-index: 1000
-      }	  
+        padding: 1;
+      }
+
 #map1 {
-    position: relative;
-    top: 0;
-    left: 100;
-    width: 100vw;
-    height: 100vh;
-    z-index: 1000;
-}
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 1;
+      }
 
   #paramForm label {
     display: block;
@@ -89,20 +104,6 @@
 </head>
 <body>
 <div id="map"></div>
-<div id="map1">
-
-	<script>
-    function newMap() {
-        map = new google.maps.Map(document.getElementById("map"), {
-		zoom: 5,
-          center: {lat: 22.2343358, lng: 91.8236618},
-          mapTypeId: 'satellite',
-          labels: false
-        });
-    }
-</script>
-<script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGXaF9n_XgHUHMaTn0wiP9yDqVB5S0SrA&amp;callback=newMap"></script>
-</div>
 <!-- Floating Form on Map -->
 <div id="input-overlay" style="
   position: absolute;
@@ -144,7 +145,7 @@
 <button type="submit">Run Simulation</button>
 </form>
 </div>
-	
+
 
 
 
@@ -229,7 +230,7 @@ var config = {
 //       Lon: longitude,
 //       Wind_Speed : ws,
 //       Wind_direction : wd,
-//       Quantity: Q,
+//       Quantity :Q,
 //       //Max_Distance : Math.max(r[i])
 //       latLng : latLng
 //   };
@@ -247,7 +248,7 @@ var config = {
 	  
 	  
       function initMap() {    
-       //setTimeout(initMap,10000)
+        //setTimeout(initMap,10000)
         var a = Math.floor(Math.random() * 180);
        // var max;
         map = new google.maps.Map(document.getElementById('map'), {
