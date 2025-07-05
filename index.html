@@ -15,7 +15,13 @@
 // myFunction();
      </script> -->
 <head>
-<meta http-equiv="refresh" content="0; URL='https://gaussianplume.github.io/?wd=0/ws=3/Q=25000/mw=17/sc=rd/lat=22.2343358/lon=91.8236618'" />
+<script>
+    // Only redirect if there are no query parameters already in the URL
+    if (!window.location.search || window.location.search === "?") {
+      window.location.href = "https://gaussianplume.github.io/?wd=0/ws=3/Q=25000/mw=17/sc=rd/lat=22.2343358/lon=91.8236618";
+    }
+  </script>
+	
 <script src="https://www.gstatic.com/firebasejs/4.10.0/firebase.js"></script>
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script>
