@@ -1930,35 +1930,35 @@ infoWindow.open(map);
       
  
     </script>
-<script>
+//<script>
 // Make the overlay draggable
-(function() {
-  const el = document.getElementById("input-overlay");
-  let isDragging = false, xOffset = 0, yOffset = 0, x = 0, y = 0;
+//(function() {
+//  const el = document.getElementById("input-overlay");
+ // let isDragging = false, xOffset = 0, yOffset = 0, x = 0, y = 0;
 
-  el.style.cursor = "move";
-  el.addEventListener("mousedown", (e) => {
-    isDragging = true;
-    xOffset = e.clientX - el.offsetLeft;
-    yOffset = e.clientY - el.offsetTop;
-    document.body.style.userSelect = "none";
-  });
+//  el.style.cursor = "move";
+//  el.addEventListener("mousedown", (e) => {
+ //   isDragging = true;
+//    xOffset = e.clientX - el.offsetLeft;
+ //   yOffset = e.clientY - el.offsetTop;
+ //   document.body.style.userSelect = "none";
+//  });
 
-  document.addEventListener("mouseup", () => {
-    isDragging = false;
-    document.body.style.userSelect = "auto";
-  });
+//  document.addEventListener("mouseup", () => {
+//    isDragging = false;
+//    document.body.style.userSelect = "auto";
+ // });
 
-  document.addEventListener("mousemove", (e) => {
-    if (isDragging) {
-      x = e.clientX - xOffset;
-      y = e.clientY - yOffset;
-      el.style.left = `${x}px`;
-      el.style.top = `${y}px`;
-    }
-  });
-})();
-</script>
+//  document.addEventListener("mousemove", (e) => {
+ //   if (isDragging) {
+ //     x = e.clientX - xOffset;
+ //     y = e.clientY - yOffset;
+  //    el.style.left = `${x}px`;
+  //    el.style.top = `${y}px`;
+//    }
+//  });
+//})();
+//</script>
 <script>
 // Minimize functionality
 document.getElementById("minimizeBtn").addEventListener("click", function () {
